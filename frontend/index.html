@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Search</title>
+    <script src="js/functions.js" defer></script> 
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <h1>Search YouTube</h1>
+
+    <input type="text" id="searchInput" placeholder="Enter video or channel name">
+    
+    <select id="filter">
+        <option value="both">Both Channels & Videos</option>
+        <option value="channel">Only Channels</option>
+        <option value="video">Only Videos</option>
+    </select>
+
+    <button onclick="searchYouTube()">Search</button>
+
+    <div id="channelSection" class="hidden">
+        <h2>Channels</h2>
+        <div id="channelResults"></div>
+        <button id="showMoreChannels" class="hidden" onclick="showMore('channel')">Show More Results</button>
+    </div>
+
+    <div id="videoSection" class="hidden">
+        <h2>Videos</h2>
+        <div id="videoResults"></div>
+        <button id="showMoreVideos" class="hidden" onclick="showMore('video')">Show More Results</button>
+    </div>
+
+</body>
+</html>
